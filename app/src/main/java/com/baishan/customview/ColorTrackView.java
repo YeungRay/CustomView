@@ -17,8 +17,8 @@ public class ColorTrackView extends View {
 
     private Paint mPaint;
 
-    private static final int DIRECTION_LEFT = 0;
-    private static final int DIRECTION_RIGHT = 1;
+    public static final int DIRECTION_LEFT = 0;
+    public static final int DIRECTION_RIGHT = 1;
 
     private String mText = "杨磊";
     private int mTextSize = sp2px(30);
@@ -41,7 +41,7 @@ public class ColorTrackView extends View {
         super(context, attrs);
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ColorTrackView);
         mText = ta.getString(R.styleable.ColorTrackView_text);
-        mTextSize = ta.getInt(R.styleable.ColorTrackView_text_size, mTextSize);
+        mTextSize = ta.getDimensionPixelSize(R.styleable.ColorTrackView_text_size, mTextSize);
         mTextOriginColor = ta.getColor(R.styleable.ColorTrackView_text_origin_color, mTextOriginColor);
         mTextChangeColor = ta.getColor(R.styleable.ColorTrackView_text_change_color, mTextChangeColor);
         mProgress = ta.getFloat(R.styleable.ColorTrackView_progress, 0);
@@ -106,7 +106,8 @@ public class ColorTrackView extends View {
             drawChangeLeft(canvas);
             drawOriginLeft(canvas);
         } else if (mDirection == DIRECTION_RIGHT) {
-
+            drawChangeRight(canvas);
+            drawOriginRight(canvas);
         }
     }
 
@@ -116,6 +117,14 @@ public class ColorTrackView extends View {
 
     private void drawChangeLeft(Canvas canvas) {
         drawText(canvas, mTextChangeColor, mTextStartX, (int) (mTextStartX + mProgress * mTextWidth));
+    }
+
+    private void drawOriginRight(Canvas canvas) {
+        drawText(canvas, mTextOriginColor, mTextStartX, (int) (mTextStartX + (1 - mProgress) * mTextWidth));
+    }
+
+    private void drawChangeRight(Canvas canvas) {
+        drawText(canvas, mTextChangeColor, (int) (mTextStartX + (1 - mProgress) * mTextWidth), mTextStartX + mTextWidth);
     }
 
     private void drawText(Canvas canvas, int color, int startX, int endX) {
@@ -133,5 +142,9 @@ public class ColorTrackView extends View {
     public void setProgress(float progress) {
         this.mProgress = progress;
         invalidate();
+    }
+
+    public void setDirection(int direction) {
+        this.mDirection = direction;
     }
 }
