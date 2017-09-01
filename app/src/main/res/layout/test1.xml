@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baishan.customview.SpringScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:enabled="true"
+            android:textColor="@color/text"
+            android:background="@android:color/white"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="测试spring动画"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:textSize="50sp"
+            android:gravity="center"
+            android:text="测试spring动画"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:textSize="50sp"
+            android:gravity="center"
+            android:text="测试spring动画"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+        <TextView
+            android:textSize="50sp"
+            android:gravity="center"
+            android:text="测试spring动画"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+        <TextView
+            android:textSize="50sp"
+            android:gravity="center"
+            android:text="测试spring动画"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+    </LinearLayout>
+
+
+
+</com.baishan.customview.SpringScrollView>

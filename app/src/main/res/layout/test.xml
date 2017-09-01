@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baishan.customview.CustomLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="@android:color/darker_gray"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:text="1233"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="324323asdasdasdasasdsad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</com.baishan.customview.CustomLinearLayout>
