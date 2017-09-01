@@ -13,7 +13,7 @@ import java.util.List;
 public class Main2Activity extends AppCompatActivity {
 
 
-    private String[] mTitles = new String[]{"简介", "评价", "相关"};
+    private String[] mTitles = new String[]{"简介", "评价", "相关","哈哈"};
     private ViewPager mViewPager;
     private FragmentPagerAdapter mAdapter;
     private TabFragment[] mFragments = new TabFragment[mTitles.length];
@@ -41,6 +41,7 @@ public class Main2Activity extends AppCompatActivity {
                                        int positionOffsetPixels) {
 
                 if (positionOffset > 0) {
+                    System.out.println(position);
                     ColorTrackView left = mTabs.get(position);
                     ColorTrackView right = mTabs.get(position + 1);
 
@@ -89,6 +90,7 @@ public class Main2Activity extends AppCompatActivity {
         mTabs.add((ColorTrackView) findViewById(R.id.id_tab_01));
         mTabs.add((ColorTrackView) findViewById(R.id.id_tab_02));
         mTabs.add((ColorTrackView) findViewById(R.id.id_tab_03));
+        mTabs.add((ColorTrackView) findViewById(R.id.id_tab_04));
     }
 
 

@@ -41,6 +41,16 @@
             zhy:text_origin_color="#ff000000"
             zhy:text_size="18sp" />
 
+        <com.baishan.customview.ColorTrackView
+            android:id="@+id/id_tab_04"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            zhy:text="哈哈"
+            zhy:text_change_color="#ffff0000"
+            zhy:text_origin_color="#ff000000"
+            zhy:text_size="18sp" />
+
 
     </LinearLayout>
 
